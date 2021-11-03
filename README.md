@@ -1,7 +1,7 @@
 Original App Design Project - README Template
 ===
 
-# Armario Shopping
+# Armario Viewing
 
 ## Table of Contents
 1. [Overview](#Overview)
