@@ -93,7 +93,7 @@ Armario Viewing is an iOS mobile application that will allow users to share phot
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://user-images.githubusercontent.com/59743056/140001051-908840a4-8a65-4873-9229-9fb3e6a80fcb.jpg" width=600>
+<img src="https://user-images.githubusercontent.com/59743056/140002057-c5da41b7-3645-44f6-9761-4782c42a9be9.jpeg" width=600>
 ![IMG_0765](https://user-images.githubusercontent.com/59743056/140002057-c5da41b7-3645-44f6-9761-4782c42a9be9.jpeg)
 
 ### [BONUS] Digital Wireframes & Mockups
