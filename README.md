@@ -92,7 +92,6 @@ Armario Viewing is an iOS mobile application that will allow users to share phot
    * User could navigate to a clothing item that was saved previously 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="https://user-images.githubusercontent.com/59743056/140002057-c5da41b7-3645-44f6-9761-4782c42a9be9.jpeg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
