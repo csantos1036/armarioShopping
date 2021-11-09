@@ -99,10 +99,162 @@ Armario Viewing is an iOS mobile application that will allow users to share phot
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+Post
+
+| Property | Type | Description |
+| --- | --- | --- |
+| postId | String	| unique id for the user post (default field) |
+| author | Pointer to User |	image author |
+| image	 | File	| image that user posts |
+| profileImage	| File |	profile image by author |
+| caption	| String |	image caption by author |
+| brand | String	| image clothing brand by author |
+| commentsCount |	Number | number of comments that has been posted to an image |
+| likesCount	| Number	| number of likes for the post |
+| savesCount	| Number	| number of saves for the post |
+| createdAt	| DateTime	| date when post is created (default field) |
+
+Wardrobe Collection 
+
+| Property | Type | Description |
+| --- | --- | --- |
+| wardrobeId | String	| unique id for the user wardrobe (default field) |
+| title	| String |	wardrobe title by author |
+| description	| String |	wardrobe description by author |
+| author | Pointer to User |	author of the wardrobe collection |
+| imagesCount |	Number | number of images that has been added to wardrobe collection |
+| posts | Pointers to Posts |	posts saved by author |
+| createdAt	| DateTime	| date when post is created (default field) |
+| updatedAt	| DateTime	| date when post is updated (default field) |
+
+User
+
+| Property | Type | Description |
+| --- | --- | --- |
+| userId | String	| unique id for the user (default field) |
+| username	| String |	username by author |
+| bio	| String |	bio by author |
+| profileImage	| File |	profile image by author |
+| posts | Pointers to Posts |	posts created by author |
+| followers | Pointer to Users |	other users that follow the user |
+| followingUsers | Pointer to Users |	other users that the user is following |
+| imagesCount |	Number | number of images that has been created |
+| followersCount |	Number | number of followers the user has |
+| followingCount |	Number | number of users the user follows |
+
+
+
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+* Home Feed Screen
+  * (Read/GET) Query all posts where author is one of the users that the logged in user follows
+```
+let query = PFQuery(className:"Post")
+query.whereKey("following", equalTo: true)
+query.order(byDescending: "createdAt")
+query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+   if let error = error { 
+      print(error.localizedDescription)
+   } else if let posts = posts {
+      print("Successfully retrieved \(posts.count) posts.")
+  // TODO: Do something with posts...
+   }
+}
+```
+  * (Create/POST) Create a new like on a post
+```
+let like = PFObject(className: "Likes")
+        save["post"] = selectedPost
+        save["author"] = PFUser.current()!
+         
+        selectedPost.add(like, forKey: "likes")
+```
+  * (Delete) Delete existing like
+```
+let like = PFObject(className: "Likes")
+        save["post"] = selectedPost
+        save["author"] = PFUser.current()!
+         
+        selectedPost.remove(like, forKey: "likes")
+```
+  * (Create/POST) Create a new comment on a post
+```
+let comment = PFObject(className: "Comments")
+        comment["text"] = text
+        comment["post"] = selectedPost
+        comment["author"] = PFUser.current()!
+         
+        selectedPost.add(comment, forKey: "comments")
+```
+  * (Delete) Delete existing comment
+```
+let comment = PFObject(className: "Comments")
+        comment["text"] = text
+        comment["post"] = selectedPost
+        comment["author"] = PFUser.current()!
+         
+        selectedPost.remove(comment, forKey: "comments")
+```
+  * (Create/POST) Create a new save on a post
+```
+let save = PFObject(className: "Saves")
+        save["post"] = selectedPost
+        save["wardrobeCollection"] = selectedWardrobeCollection
+        save["author"] = PFUser.current()!
+         
+        selectedWardrobeCollection.add(save, forKey: "saves")
+```
+  * (Delete) Delete existing save
+```
+let save = PFObject(className: "Saves")
+        save["post"] = selectedPost
+        save["wardrobeCollection"] = selectedWardrobeCollection
+        save["author"] = PFUser.current()!
+         
+        selectedWardrobeCollection.remove(save, forKey: "saves")
+```
+* Create Post Screen
+  * (Create/POST) Create a new post object
+```
+let post = PFObject(className: "Posts")
+        post["caption"] = caption
+        post["brand"] = brand
+        post["image"] = image
+        post["author"] = PFUser.current()!
+         
+        PFUser.current()!.add(post, forKey: "posts")
+```
+* Create Wardrobe Collection Screen
+  * (Create/POST) Create a new wardrobe collection object
+```
+let wardrobe = PFObject(className: "Posts")
+        wardrobe["title"] = title
+        wardrobe["description"] = brand
+        wardrobe["save"] = save
+        wardrobe["author"] = PFUser.current()!
+         
+        PFUser.current()!.add(wardrobeCollection, forKey: "wardrobeCollections")
+```
+* Profile Screen
+  * (Read/GET) Query logged in user object
+```
+let query = PFQuery(className:"User")
+query.whereKey("userId", equalTo:  PFUser.current()!)
+```
+  * (Read/GET) Query all posts where where user is author
+```
+let query = PFQuery(className:"Post")
+query.whereKey("author", equalTo: currentUser)
+query.order(byDescending: "createdAt")
+query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+   if let error = error { 
+      print(error.localizedDescription)
+   } else if let posts = posts {
+      print("Successfully retrieved \(posts.count) posts.")
+  // TODO: Do something with posts...
+   }
+}
+```
