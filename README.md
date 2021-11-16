@@ -258,3 +258,17 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
    }
 }
 ```
+
+### First Sprint Progress
+
+<img src='https://user-images.githubusercontent.com/59743056/141922155-5419030f-3f27-4550-8029-7559fe54f243.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+
+<img src='https://user-images.githubusercontent.com/59743056/141922564-fc35ba3e-76cd-4cad-ba52-457c0411217f.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+
+<img src='https://user-images.githubusercontent.com/59743056/141922803-c6bb4a9a-cbd3-4927-be70-a62f0323794d.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+
+<img src='https://user-images.githubusercontent.com/59743056/141923251-3bbe90db-432a-4466-8d44-67b4ee9b4711.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+
+<img src='https://user-images.githubusercontent.com/59743056/141923385-b4ccc928-5047-4a4b-9659-9e3212065daa.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+
+
