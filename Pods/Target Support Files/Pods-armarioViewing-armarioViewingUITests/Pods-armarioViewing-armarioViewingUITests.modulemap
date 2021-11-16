@@ -1,0 +1,6 @@
+framework module Pods_armarioViewing_armarioViewingUITests {
+  umbrella header "Pods-armarioViewing-armarioViewingUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
