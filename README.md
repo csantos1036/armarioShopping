@@ -28,23 +28,23 @@ Armario Viewing is an iOS mobile application that will allow users to share phot
 
 **Required Must-have Stories**
 
-* User can post a new photo of their clothing item.
-* User can create a closet to post their photos.
-* User can login
-* User can sign up for the app
-* User can search for other users
-* User can like a photo
-* User can save a photo
-* User can create a wardrobe to save posts to 
-* User can give a wardrobe a title and a description
-* User can view a feed of clothing posts
+- [x] User can post a new photo of their clothing item.
+- [x] User can create a closet to post their photos.
+- [x] User can login
+- [x] User can sign up for the app
+- [ ] User can search for other users
+- [ ] User can like a photo
+- [ ] User can save a photo
+- [ ] User can create a wardrobe to save posts to 
+- [ ] User can give a wardrobe a title and a description
+- [ ] User can view a feed of clothing posts
 
 **Optional Nice-to-have Stories**
 
-* Users can sell clothing pieces 
-* Users list a price for their clothing pieces
-* Users can bid on clothing pieces
-* Users link online payment systems
+- [ ] Users can sell clothing pieces 
+- [ ] Users list a price for their clothing pieces
+- [ ] Users can bid on clothing pieces
+- [ ] Users link online payment systems
 
 ### 2. Screen Archetypes
 
