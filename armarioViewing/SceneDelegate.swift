@@ -21,10 +21,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if PFUser.current() != nil {
             let main = UIStoryboard(name: "Main", bundle: nil)
-            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
-            
-            window?.rootViewController = feedNavigationController
+            let mainTabBarController = main.instantiateViewController(identifier: "MainTabBarController") as UITabBarController?
+            window?.rootViewController = mainTabBarController
+            //let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
+            //window?.rootViewController = feedNavigationController
         }
+    }
+    
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else {
+            return
+        }
+        
+        // change the root view controller to your specific view controller
+        window.rootViewController = vc
+        
+        // add animation
+        UIView.transition(with: window,
+                              duration: 0.5,
+                              options: [.transitionFlipFromLeft],
+                              animations: nil,
+                              completion: nil)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

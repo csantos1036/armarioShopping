@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		975656A33D0E9D089A89B9BB /* Pods_armarioViewing_armarioViewingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955E9747E320A60100D1FF1B /* Pods_armarioViewing_armarioViewingUITests.framework */; };
 		9E63F43D04E8E74323396EE6 /* Pods_armarioViewing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C077576E581EA782B78CE /* Pods_armarioViewing.framework */; };
+		C973E385274B3AA900AEAC17 /* WardrobeGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C973E384274B3AA900AEAC17 /* WardrobeGridViewController.swift */; };
+		C973E387274B3B9500AEAC17 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C973E386274B3B9500AEAC17 /* SearchViewController.swift */; };
+		C973E389274B3C1200AEAC17 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C973E388274B3C1200AEAC17 /* ProfileViewController.swift */; };
+		C973E38F274B4B9000AEAC17 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C973E38E274B4B9000AEAC17 /* MainTabBarController.swift */; };
 		C9BAA56A2742193D005C7210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAA5692742193D005C7210 /* AppDelegate.swift */; };
 		C9BAA56C2742193D005C7210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAA56B2742193D005C7210 /* SceneDelegate.swift */; };
 		C9BAA56E2742193D005C7210 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAA56D2742193D005C7210 /* ViewController.swift */; };
@@ -51,6 +55,10 @@
 		955E9747E320A60100D1FF1B /* Pods_armarioViewing_armarioViewingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_armarioViewing_armarioViewingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B113C41B5B1F6EA0B0FA9A76 /* Pods-armarioViewing-armarioViewingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-armarioViewing-armarioViewingUITests.release.xcconfig"; path = "Target Support Files/Pods-armarioViewing-armarioViewingUITests/Pods-armarioViewing-armarioViewingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B60A6E71C77E450548A713DC /* Pods_armarioViewingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_armarioViewingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C973E384274B3AA900AEAC17 /* WardrobeGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeGridViewController.swift; sourceTree = "<group>"; };
+		C973E386274B3B9500AEAC17 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C973E388274B3C1200AEAC17 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C973E38E274B4B9000AEAC17 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		C9BAA5662742193D005C7210 /* armarioViewing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = armarioViewing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BAA5692742193D005C7210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9BAA56B2742193D005C7210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +169,10 @@
 				C9BAA59D274314FB005C7210 /* CameraViewController.swift */,
 				C9BAA59F27431518005C7210 /* PostCell.swift */,
 				C9BAA5A127431547005C7210 /* CommentCell.swift */,
+				C973E384274B3AA900AEAC17 /* WardrobeGridViewController.swift */,
+				C973E386274B3B9500AEAC17 /* SearchViewController.swift */,
+				C973E388274B3C1200AEAC17 /* ProfileViewController.swift */,
+				C973E38E274B4B9000AEAC17 /* MainTabBarController.swift */,
 			);
 			path = armarioViewing;
 			sourceTree = "<group>";
@@ -421,10 +433,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C973E387274B3B9500AEAC17 /* SearchViewController.swift in Sources */,
 				C9BAA59A27431487005C7210 /* LoginViewController.swift in Sources */,
+				C973E38F274B4B9000AEAC17 /* MainTabBarController.swift in Sources */,
+				C973E385274B3AA900AEAC17 /* WardrobeGridViewController.swift in Sources */,
 				C9BAA56E2742193D005C7210 /* ViewController.swift in Sources */,
 				C9BAA59C274314E1005C7210 /* FeedViewController.swift in Sources */,
 				C9BAA56A2742193D005C7210 /* AppDelegate.swift in Sources */,
+				C973E389274B3C1200AEAC17 /* ProfileViewController.swift in Sources */,
 				C9BAA56C2742193D005C7210 /* SceneDelegate.swift in Sources */,
 				C9BAA5A027431518005C7210 /* PostCell.swift in Sources */,
 				C9BAA59E274314FB005C7210 /* CameraViewController.swift in Sources */,

@@ -17,10 +17,14 @@ class LoginViewController: UIViewController {
         let username = usernameField.text!;
         let password = passwordField.text!;
         
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let mainTabBarController = main.instantiateViewController(identifier: "MainTabBarController") as UITabBarController?
+            
+        
         PFUser.logInWithUsername(inBackground: username, password: password) {
             (user, error) in
             if user != nil {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController!)
             } else {
                 print("Error: \(String(describing: error?.localizedDescription))")
             }
