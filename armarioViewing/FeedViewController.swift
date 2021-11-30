@@ -116,6 +116,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let user = post["author"] as! PFUser
             cell.usernameLabel.text = user.username
             
+            if (comments.count == 1) {
+                cell.commentCountLabel.text = "\(comments.count) Comment"
+            }
+            else {
+                cell.commentCountLabel.text = "\(comments.count) Comments"
+            }
+            
             cell.captionLabel.text = post["caption"] as? String
             cell.brandLabel.text = post["brand"] as? String
             

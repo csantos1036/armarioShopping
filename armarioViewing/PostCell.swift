@@ -15,9 +15,12 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeCountLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     
     var liked = false
     var likesCount = 5;
+    var saved = false
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
         print("like button tapped")
@@ -39,6 +42,25 @@ class PostCell: UITableViewCell {
             likesCount -= 1
             likeCountLabel.text = "\(likesCount) Likes"
             likeButton.setImage(UIImage(named: "favor-icon"), for: UIControl.State.normal)
+        }
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        print("save button tapped")
+        
+        if (!liked) {
+            self.setSaved(true)
+        } else {
+            self.setSaved(false)
+        }
+    }
+    
+    func setSaved(_ isSaved:Bool) {
+        saved = isSaved
+        if (saved) {
+            saveButton.setImage(UIImage(named: "icons8-fill"), for: UIControl.State.normal)
+        } else {
+            saveButton.setImage(UIImage(named: "icons8-bookmark-24"), for: UIControl.State.normal)
         }
     }
     
