@@ -35,7 +35,7 @@ Armario Viewing is an iOS mobile application that will allow users to share phot
 - [ ] User can search for other users
 - [x] User can like a photo
 - [x] User can save a photo
-- [ ] User can create a wardrobe to save posts to 
+- [x] User can create a wardrobe to save posts to 
 - [ ] User can give a wardrobe a title and a description
 - [x] User can view a feed of clothing posts
 
@@ -278,3 +278,9 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 ### Third Sprint Progress
 
 <img src='https://user-images.githubusercontent.com/59743056/143983637-12af1052-f840-4226-bf08-3b49fb6a39c6.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+
+### Fourth Sprint Progress
+
+<img src='https://user-images.githubusercontent.com/59743056/145303465-836d68b5-0962-4468-81f1-17ff851d1a2b.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+
+<img src='https://user-images.githubusercontent.com/59743056/145303500-ac2ab6a5-9a1f-4bf3-ab00-0d4e4b8400f3.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
