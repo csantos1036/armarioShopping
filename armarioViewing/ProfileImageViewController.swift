@@ -2,7 +2,7 @@
 //  ProfileImageViewController.swift
 //  armarioViewing
 //
-//  Created by Carolina Santos on 12/7/21.
+//  Created by Group 4: Carolina Santos on 12/7/21.
 //
 
 import UIKit
