@@ -2,7 +2,7 @@
 //  GridCollectionViewCell.swift
 //  armarioViewing
 //
-//  Created by Carolina Santos on 12/8/21.
+//  Created by Group 4: Carolina Santos on 12/8/21.
 //
 
 import UIKit
