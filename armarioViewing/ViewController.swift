@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  armarioViewing
 //
-//  Created by Carolina Santos on 11/14/21.
+//  Created by Group 4: Carolina Santos on 11/14/21.
 //
 
 import UIKit
